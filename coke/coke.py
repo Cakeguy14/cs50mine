@@ -1,6 +1,7 @@
 
 
 amountdue = 50
+print(amountdue)
 
 
 while amountdue > 0:
@@ -10,4 +11,4 @@ while amountdue > 0:
     if amountdue > 0:
             print(f"amount due: {amountdue}")
     else:
-        print(amount due)
+        print(amountdue)
