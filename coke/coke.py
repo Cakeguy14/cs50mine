@@ -9,7 +9,8 @@ while amountdue > 0:
 
     if num in (25,10,5):
         amountdue -= num
+
     if amountdue > 0:
-            print(f"change owed: {amountdue}")
+        print(f"change owed: {amountdue}")
 
 print(f"change: {-amountdue}")
