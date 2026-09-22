@@ -6,8 +6,10 @@ def main():
 
 
 def vowels(n):
-    word = str(n)
-    if word.lower() in "aeiou":
-        return word.strip("a","e","i","o","u")
+    result = ""
+    for c in n:
+        if c.lower() not in "aeiou":
+            result += c
+    return result
 
 main()
