@@ -6,6 +6,10 @@ def main():
 
 def convert(n):
     time = datetime.time(n)
-    if time > "7:00 AM":
-        return f"{time}
+    if "7:00 AM" < time < "8:00 AM":
+        return "Breakfast time"
+    elif "12:00 PM" < time < "13:00 PM":
+        return "Lunch time"
+    elif "18:00 PM" < time < "19:00 PM":
+        return "Lunch time"
 
