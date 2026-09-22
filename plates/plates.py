@@ -7,7 +7,7 @@ def main():
 
 
 def is_valid(s):
-    ...
+    if valid := re.search(r"^([a-ZA-Z])*\d+)
 
 
 main()
