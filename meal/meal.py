@@ -7,7 +7,7 @@ def main():
         print(result)
 
 def convert(n):
-    time = datetime.datetime.strptime(n, %I:%M).time()
+    time = datetime.datetime.strptime(n, "%H:%M").time()
     if datetime.time(7,0) <= time < datetime.time(8,0):
         return "Breakfast time"
     elif datetime.time(12,0) <= time < datetime.time(13,0):
