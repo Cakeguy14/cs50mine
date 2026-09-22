@@ -12,4 +12,4 @@ while amountdue > 0:
     if amountdue > 0:
             print(f"change owed: {amountdue}")
     else:
-        print(f"changeowed: {amountdue}")
+        print(f"change: {amountdue}")
