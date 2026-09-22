@@ -11,6 +11,8 @@ def is_valid(s):
         return false
     if re.match(r"^[a-zA-Z]{2,}", s):
         return false
-    if re.search(r")
+    if re.search(r"^[a-zA-Z0-9]+$", s):
+        return false
+    
 
 main()
