@@ -1,18 +1,14 @@
 
 def main():
-    balance = 50
-    print(due(num))
+    amountdue = 50
+    num = int(input("Enter num: "))
 
-
-
-def due(balance):
-    num = int(input("Enter the amount: "))
-
-    while True:
+    while amountdue > 0:
         if num in (25,10,5):
-            balance -= amount
+            amountdue -= num
+            print(amountdue)
+            return amountdue
         else:
-            return None
-        return balance
+            break
 
 main()
