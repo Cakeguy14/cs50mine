@@ -1,9 +1,3 @@
 
-words = input("enter your words: ")
-
-if " " in words:
-    print(f"...{words}...")
-
-
-
-
+if words := input("enter your words: ").split():
+    print("...".join(words) + ".")
