@@ -1,10 +1,11 @@
 
 def main():
+    balance = 50
     print(due(num))
 
 
 
-def due():
+def due(balance):
     num = int(input("Enter the amount: "))
 
     while True:
