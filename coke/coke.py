@@ -9,5 +9,5 @@ def due(amount):
         if amount == (25|10|5):
             balance -= amount
         else:
-            return None
+            break
     return balance
