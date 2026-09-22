@@ -1,16 +1,13 @@
+amount_due = 50
+print(f"Amount Due: {amount_due}")
 
+while amount_due > 0:
+    coin = int(input("Insert Coin: "))
 
-amountdue = 50
-print(f"Amount due: {amountdue}")
+    if coin in (25, 10, 5):
+        amount_due -= coin
 
+    if amount_due > 0:
+        print(f"Amount Due: {amount_due}")
 
-while amountdue > 0:
-    num = int(input("Enter num: "))
-
-    if num in (25,10,5):
-        amountdue -= num
-
-    if amountdue > 0:
-        print(f"Amount Due: {amountdue}")
-
-print(f"change: {-amountdue}")
+print(f"Change Owed: {-amount_due}")
