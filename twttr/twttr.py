@@ -7,5 +7,6 @@ def main():
 
 def vowels(n):
     word = str(n)
-    if ("a",e)
+    if word in "aeiou":
+        return 
 
