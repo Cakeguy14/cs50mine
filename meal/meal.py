@@ -2,18 +2,19 @@ import datetime
 
 def main():
     n = (input("WWhat time is it? "))
-    print(convert(n))
+    result = convert(n)
+    if result:
+        print(result)
 
 def convert(n):
-    time = datetime.datetime(n)
-    if "7:00 AM" < time < "8:00 AM":
+    time = datetime.datetime.strptime(n, %I:%M).time()
+    if datetime.time(7,0) <= time < datetime.time(8,0):
         return "Breakfast time"
-    elif "12:00 PM" < time < "13:00 PM":
+    elif datetime.time(12,0) <= time < datetime.time(13,0):
         return "Lunch time"
-    elif "18:00 PM" < time < "19:00 PM":
+    elif datetime.time(18,0) <= time < datetime.time(19,0):
         return "Lunch time"
-    else:
-        return None
+    return None
 
 main()
 
