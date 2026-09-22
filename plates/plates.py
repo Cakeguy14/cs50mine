@@ -7,10 +7,10 @@ def main():
 
 
 def is_valid(s):
-    while len(s) == 6:
-        if valid := re.search(r"^[a-ZA-Z]{2,}[0-9]*$", s)
-        return valid
-    else:
-        break
+    if len(s) < 2 or len(s) > 6:
+        return false
+    if re.match(r"^[a-zA-Z]{2,}", s):
+        return false
+    if re.search(r")
 
 main()
