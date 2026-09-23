@@ -21,4 +21,11 @@ def calories(fruit):
     if fruit == "honeydew melon":
         return "50"
     if fruit == "kiwifruit":
-        return "
+        return "90"
+    if fruit == "lemon":
+        return "15"
+    if fruit == "lime":
+        return "20"
+    if fruit == "nectarine":
+        return "60"
+    
