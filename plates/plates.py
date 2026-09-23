@@ -1,5 +1,7 @@
+import re
+
 def main():
-    plate = input("Plate: ")
+    plate = input("Plate: ").upper()
     if is_valid(plate):
         print("Valid")
     else:
@@ -8,16 +10,18 @@ def main():
 
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
-        return false
+        return False
     if not re.match(r"^[a-zA-Z]{2,}", s):
-        return false
+        return False
     if not re.search(r"^[a-zA-Z0-9]+$", s):
-        return false
+        return False
     if re.search(r"[a-zA-Z][0-9]", s):
-        return false
+        return False
     if re.search(r"0[0-9]", s):
-        return false
-    
+        return False
+
+    return True
+
 
 
 main()
