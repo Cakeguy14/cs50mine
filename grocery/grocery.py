@@ -4,7 +4,7 @@ def main():
     items = []
     while True:
         try:
-            item = input("Item: ").upper()
+            item = input(, end="\n").upper()
         except EOFError:
             break
 
