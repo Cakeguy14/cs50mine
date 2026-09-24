@@ -1,17 +1,20 @@
-
+from collections import Counter
 
 def main():
-    Item = []
+    items = []
     while True:
         try:
             item = input("Enter Item: ").upper()
         except EOFError:
             break
 
-        Item.append(item)
+        items.append(item)
 
-        for i, each in enumerate(Item):
-            print(i, each)
+        counts = Counter(items)
+
+        for item, count in sorted(counts.items(), key=lambda x: x[1], reverse=True):
+            print(count, item)
+
 
 main()
 
