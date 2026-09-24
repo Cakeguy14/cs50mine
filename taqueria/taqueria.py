@@ -17,4 +17,11 @@ def main():
         if value in Item:
             Amount += value
         print(f"${Amount:.2f}")
-        break
+        pass
+
+        else:
+            break
+
+main()
+
+
