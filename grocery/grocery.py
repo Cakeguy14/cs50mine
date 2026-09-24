@@ -12,7 +12,7 @@ def main():
 
         counts = Counter(items)
 
-        for item, count in sorted(counts.items(), key=lambda x: x[1], reverse=True):
+        for item, count in sorted(counts.items()):
             print(count, item)
 
 
