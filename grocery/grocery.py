@@ -10,10 +10,10 @@ def main():
 
         items.append(item)
 
-        counts = Counter(items)
+    counts = Counter(items)
 
-        for item, count in sorted(counts.items()):
-            print(count, item)
+    for item, count in sorted(counts.items()):
+        print(count, item)
 
 
 main()
