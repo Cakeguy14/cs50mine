@@ -1,10 +1,12 @@
+import sys
 from collections import Counter
 
 def main():
     items = []
     while True:
         try:
-            item = input(, end="\n").upper()
+            print("Item: ", end="", file=sys.stderr)
+            item = input().upper()
         except EOFError:
             break
 
