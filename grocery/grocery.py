@@ -5,7 +5,6 @@ def main():
     items = []
     while True:
         try:
-            print("Item: ", end="", file=sys.stderr)
             item = input().upper()
         except EOFError:
             break
@@ -13,6 +12,8 @@ def main():
         items.append(item)
 
     counts = Counter(items)
+
+    print()
 
     for item, count in sorted(counts.items()):
         print(count, item)
