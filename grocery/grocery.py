@@ -12,8 +12,8 @@ def main():
 
         counts = Counter(items)
 
-        for item, count in sorted(counts.items()):
-            print(count, item)
+        for key, count in sorted(counts.items()):
+            print(count, key)
 
 
 main()
