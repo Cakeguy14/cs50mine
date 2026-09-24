@@ -1,17 +1,17 @@
 
 
 def main():
+    Item = []
     while True:
-        Item = []
-        item = input("Enter Item: ").upper()
+        try:
+            item = input("Enter Item: ").upper()
+        except EOFError:
+            break
+
         Item.append(item)
 
         for i, each in enumerate(Item):
-            print(len(i), each)
-            pass
-
-        if item == EOFError:
-            break
+            print(i, each)
 
 main()
 
