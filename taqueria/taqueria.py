@@ -1,4 +1,4 @@
-Item = [{
+Item = {
     "Baja Taco": 4.25,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -8,15 +8,19 @@ Item = [{
     "Super Quesadilla": 9.50,
     "Taco": 3.00,
     "Tortilla Salad": 8.00
-}]
+}
 
 def main():
-    value = input("Enter Item: ").title()
     Amount = 0
     while True:
         try:
-            if value not in Item:
+            value = input("Enter Item: ").title()
+        except EOFError:
+            break
 
+        if value in Item:
+            Amount += Item[value]
+        print(f"${Amount:.2f}")
 
 main()
 
