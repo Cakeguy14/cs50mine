@@ -1,31 +1,32 @@
 
 
 def main():
+    fruit = input("ITEM: ").lower()
 
+    calories = {
+    "apple": "130",
+    "avocado": "50",
+    "banana": "110",
+    "cantaloupe": "50",
+    "grapefruit": "60",
+    "grapes": "90",
+    "honeydew melon": "50",
+    "kiwifruit": "90",
+    "lemon": "15",
+    "lime": "20",
+    "nectarine": "60",
+    "orange": "80",
+    "peach": "60",
+    "pear": "100",
+    "pineapple": "50",
+    "plums": "70",
+    "strawberries": "50",
+    "sweet cherries": "100",
+    "tangerine": "50",
+    "watermelon": "80"
+}
 
+    if fruit in calories:
+        print(f"calories: {calories[fruit]}")
 
-def calories(fruit):
-
-    if fruit == "apple":
-        return "130"
-    if fruit == "avocado":
-        return "50"
-    if fruit == "banana":
-        return "110"
-    if fruit == "cantaloupe":
-        return "50"
-    if fruit == "grapefruit":
-        return "60'
-    if fruit == "grapes":
-        return "90"
-    if fruit == "honeydew melon":
-        return "50"
-    if fruit == "kiwifruit":
-        return "90"
-    if fruit == "lemon":
-        return "15"
-    if fruit == "lime":
-        return "20"
-    if fruit == "nectarine":
-        return "60"
-    
+main()
