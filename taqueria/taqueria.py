@@ -11,15 +11,12 @@ Item = [{
 }]
 
 def main():
-    Amount = []
-    value = input("Item: ").title()
+    value = input("Enter Item: ").title()
+    Amount = 0
     while True:
-        if value not in Item:
-            break
-        else:
-            Amount += value[key]
-        print(f"${Amount:.2f}")
-        pass
+        try:
+            if value not in Item:
+
 
 main()
 
