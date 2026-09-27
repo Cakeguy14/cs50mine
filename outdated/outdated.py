@@ -25,14 +25,21 @@ def main():
             raise ValueError("Date is not correct format")
         break
 
-    if date.isalpha() in dates:
-        format_two = re.split(r"^([a-zA-Z 0-9])\,((\d+){,4})$", ",", date)
-        print
+    if dates.isalpha():
+        format_two = re.split(r"^([a-zA-Z ])([0-9])\,((\d+){,4})$", ",", date)
+        datelist = []
+        datelist.append(format_two.group(1)).strip()
+        if datelist[i] in Month and format_two.group(2) <= 31:
+            print(f"{format_two.group(3)}-{datelist[i]+1}-{format_two.group(2)}")
+    elif dates.isalnum() and format_two.group(2) <= 31:
+        format_one = re.fullmatch(r"^(\d+){,2}\/(\d+){,2}\/(\d+){,4}$", date)
+        print(f"{format_one(3)}-{format_one(2)}-{format_one(1)}")
+
+main()
 
 
-    format_one = re.fullmatch(r"^(\d+){,2}\/(\d+){,2}\/(\d+){,4}$", date)
-    if date == Month in dates:
-        format_two = da
+
+
 
 
 
