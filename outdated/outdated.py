@@ -17,6 +17,11 @@ Month = [
 def main():
     while True:
         try:
-            dates input("DATE: ")
+            dates = input("DATE: ")
         except:
-            
+            raise ValueError("Date is not correct format")
+        break
+
+    for date in dates:
+        
+
