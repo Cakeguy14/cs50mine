@@ -32,10 +32,14 @@ def main():
                 break
             else:
                 continue
-            
-        match = re.fullmatch(r"([a-zA-z]+) (\d{1,2})\, (\d{4})", dates)
 
-        month_name = match.group(1)
+        match = re.fullmatch(r"([a-zA-z]+) (\d{1,2})\, (\d{4})", dates)
+        if match:
+            month_name = match.group(1).capitalize()
+            day = match.group(2)
+            year = match.group(3)
+
+            if month_name in Month 
 
 
 
