@@ -33,14 +33,14 @@ def main():
             else:
                 continue
 
-        match = re.fullmatch(r"([a-zA-z]+) (\d{1,2})\, (\d{4})", dates)
+        match = re.fullmatch(r"([a-zA-z]+) (\d{1,2}), (\d{4})", dates)
         if match:
             month_name = match.group(1).capitalize()
             day = int(match.group(2))
             year = int(match.group(3))
 
             if month_name in Month and 1 <= day <= 31:
-                month = month_name.index(Month+1)
+                month = Month.index(month_name)+1
                 print(f"{year:04d}-{month:02d}-{day:02d}")
                 break
             else:
