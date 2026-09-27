@@ -19,7 +19,7 @@ Month = [
 
 def main():
     while True:
-        dates = input("DATE: ")
+        dates = input("DATE: ").strip()
 
         match = re.fullmatch(r"(\d{1,2})\/(\d{1,2})\/(\d{4})", dates)
 
