@@ -1,3 +1,6 @@
+import re
+
+
 Month = [
     "January",
     "February",
@@ -22,6 +25,11 @@ def main():
             raise ValueError("Date is not correct format")
         break
 
-    for date in dates:
-        
+    dates = []
+
+    format_one = re.fullmatch(r"^(\d+){,2}\/(\d+){,2}\/(\d+){,4}$", date)
+    if date == Month in dates:
+        format_two = da
+
+
 
