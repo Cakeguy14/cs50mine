@@ -18,4 +18,5 @@ def main():
     while True:
         try:
             dates input("DATE: ")
-        except 
+        except:
+            
