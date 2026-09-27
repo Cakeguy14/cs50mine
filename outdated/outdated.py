@@ -40,7 +40,13 @@ def main():
             year = match.group(3)
 
             if month_name in Month and 1 <= day <= 31:
-                
+                month = month_name.index(Month+1)
+                print(f"{year:04d}-{month:02d}-{day:02d}")
+                break
+            else:
+                continue
+
+main()
 
 
 
