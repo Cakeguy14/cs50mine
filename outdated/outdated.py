@@ -27,14 +27,15 @@ def main():
             month = match.group(1)
             day = match.group(2)
             year = match.group(3)
-            print(f"{year:04d}-{month:02d}-{day:02d}")
-            break
-        else:
-            continue
+            if 1 <= day <=31 and 1 <= month <= 12:
+                print(f"{year:04d}-{month:02d}-{day:02d}")
+                break
+            else:
+                continue
+            
+        match = re.fullmatch(r"([a-zA-z]+) (\d{1,2})\, (\d{4})", dates)
 
-        match
-
-main()
+        month_name = match.group(1)
 
 
 
