@@ -25,7 +25,10 @@ def main():
             raise ValueError("Date is not correct format")
         break
 
-    dates = []
+    if date.isalpha() in dates:
+        format_two = re.split(r"^([a-zA-Z 0-9])\,((\d+){,4})$", ",", date)
+        print
+
 
     format_one = re.fullmatch(r"^(\d+){,2}\/(\d+){,2}\/(\d+){,4}$", date)
     if date == Month in dates:
