@@ -39,7 +39,8 @@ def main():
             day = match.group(2)
             year = match.group(3)
 
-            if month_name in Month 
+            if month_name in Month and 1 <= day <= 31:
+                
 
 
 
