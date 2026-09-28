@@ -4,7 +4,7 @@ import random
 def main():
     while True:
         try:
-            level = int(input("Enter: "))
+            level = (input("Level: "))
             if level > 0:
                 break
         except ValueError:
