@@ -1,4 +1,5 @@
 
 
 def main():
-    lll
+    name = input("Enter: ")
+    
