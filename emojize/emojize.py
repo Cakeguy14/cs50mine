@@ -1,10 +1,12 @@
-import requests
+import emoji
 
 
 def main():
 
     emoji = input("INPUT: ")
+    print(f"OUTPUT: {emoji.emojize(n)}")
 
-    emojize = requests.get("https://github.com/carpedm20/emoji.git")
 
-    
+main()
+
+
