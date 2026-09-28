@@ -4,22 +4,29 @@ import random
 def main():
     while True:
         try:
-            num = input("Enter: ")
-        except:
-            if num < 0:
-                pass
+            level = int(input("Enter: "))
+            if level > 0:
+                break
+        except ValueError:
+            pass
 
 
-        value = random.randint(range(n))
+    value = random.randint(1,level)
 
-        if value == num:
-            print("Just right!")
-            break
-        elif value > num:
-            print("Too Large!")
-            break
-        else:
-            print("Too Small")
+    while True:
+        try:
+            guess = int(input("Guess: "))
+            if guess < 1:
+                continue
+
+            if value == guess:
+                print("Just right!")
+            elif value > guess:
+                print("Too Large!")
+            else:
+                print("Too Small")
+
+        except ValueError:
             break
 
 main()
