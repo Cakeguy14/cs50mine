@@ -1,7 +1,7 @@
 
 
 def main():
-    names = list(input("Enter: "))
+    names = input("Enter: ")
 
     if len(names) == 1:
         print f"Adieu,adieu, to {names[0]}"
