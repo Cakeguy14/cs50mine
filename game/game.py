@@ -19,12 +19,12 @@ def main():
             if guess < 1:
                 continue
 
-            if value == guess:
-                print("Just right!")
-            elif value > guess:
+            if guess < value:
+                print("Too Small!")
+            elif guess > value:
                 print("Too Large!")
             else:
-                print("Too Small")
+                print("Just right!")
                 break
 
         except ValueError:
