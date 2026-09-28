@@ -18,6 +18,6 @@ def adieu(names):
         return f"\nAdieu, adieu, to {names[0]} and {names[1]}"
     else:
         all_but_last = ", ".join(names[:-1])
-        return f"\nAdieu, adieu, to {all_but_last} and, {names[-1]}"
+        return f"\nAdieu, adieu, to {all_but_last} and {names[-1]}"
 
 main()
