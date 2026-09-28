@@ -25,9 +25,10 @@ def main():
                 print("Too Large!")
             else:
                 print("Too Small")
+                break
 
         except ValueError:
-            break
+            pass
 
 main()
 
