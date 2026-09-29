@@ -16,7 +16,9 @@ def main():
             try:
                 ans = int(input(f"{a}+{b} ="))
                 if ans == correct:
-                    print()
+                    print(f"Just Right!")
+                elif:
+                    
 
 
 
