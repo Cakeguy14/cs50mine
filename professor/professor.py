@@ -18,7 +18,7 @@ def main():
                 if ans == correct:
                     print(f"Just Right!")
                     score += 1
-                elif correct != ans:
+                else:
                     print("EEE")
                     tries += 1
                     pass
