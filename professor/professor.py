@@ -17,15 +17,18 @@ def main():
                 ans = int(input(f"{a}+{b} ="))
                 if ans == correct:
                     print(f"Just Right!")
-                elif:
-                    
+                    score += 1
+                elif correct != ans:
+                    print("EEE")
+                    tries += 1
+                    pass
 
+                if tries == 3:
+                    print(f"{a}+{b} = {correct}")
+                    pass
 
-
-
-
-
-
+            except ValueError:
+                pass
 
 def get_level(level):
     while True:
