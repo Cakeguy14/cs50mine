@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    level = get_level()
+    level = get_level(level)
     score = 0
 
     for _ in range(10):
@@ -30,7 +30,7 @@ def main():
             except ValueError:
                 pass
 
-def get_level(level):
+def get_level(n):
     while True:
         try:
             level = input("LEVEL: ")
