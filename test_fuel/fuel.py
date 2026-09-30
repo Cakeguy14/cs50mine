@@ -2,8 +2,7 @@
 def main():
     fraction = input("Fraction: ")
     percentage = convert(fraction)
-    result = gauge(percentage)
-    print(result)
+    gauge(percentage)
 
 
 def convert(fraction):
