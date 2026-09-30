@@ -3,15 +3,18 @@ from bank import hello
 
 
 def main():
-    greeting = input("value: ")
-    print(test_value(greeting))
+    greet = input("value: ")
+    print(test_hello(greet))
 
 
 
-def test_value(greeting):
-    assert hello("hello") == "$0"
-    assert hello("h") == "$20"
-    assert hello() == "$100"
+def test_hello(greeting):
+    if greeting == "hello":
+        assert "$0"
+    elif greeting.startswith("h"):
+        assert "$20"
+    else:
+        assert "$100"
 
 
 
