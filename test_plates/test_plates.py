@@ -7,3 +7,5 @@ def test_word():
 
 def test_num():
     assert is_valid("CAT00")
+
+def test_firstzero()
