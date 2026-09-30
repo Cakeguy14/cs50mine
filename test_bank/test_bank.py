@@ -1,22 +1,12 @@
 import pytest
-from bank import hello
+from bank import value
 
 
-def main():
-    greet = input("value: ")
-    print(test_hello(greet))
+def test_value():
+    assert value("hello") == "$0"
 
+def test_h():
+    assert value("h") == "$20"
 
-
-def test_hello(greeting):
-    if greeting == "hello":
-        assert "$0"
-    elif greeting.startswith("h"):
-        assert "$20"
-    else:
-        assert "$100"
-
-
-
-if __name__ == "__main__":
-    main()
+def others():
+    assert value("123") == "$100"
