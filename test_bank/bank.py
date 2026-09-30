@@ -14,6 +14,6 @@ def main():
     say = account.hello(greeting)
     print(say)
 
-main()
-
+if __name__ == "__main__":
+    main()
 
