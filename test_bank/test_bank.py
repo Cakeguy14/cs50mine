@@ -6,6 +6,7 @@ def main():
 
 
 def value(greeting):
+    assert bank.hello("hello")
 
 
 
