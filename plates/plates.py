@@ -3,7 +3,7 @@ import re
 def main():
     plate = input("Plate: ").upper()
     if is_valid(plate):
-        print("Valid")
+        print("Valid")check
     else:
         print("Invalid")
 
