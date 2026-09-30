@@ -8,7 +8,7 @@ def main():
 
 
 
-def value(greeting):
+def test_value(greeting):
     banks = bank()
     assert banks.hello("hello") == "$0"
     assert banks.hello("h") == "$20"
