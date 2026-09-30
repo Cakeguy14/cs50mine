@@ -1,15 +1,16 @@
 
 def main():
     v = input("Enter words: ")
-    print(vowels(v))
+    print(shorten(v))
 
 
-
-def vowels(n):
+def shorten(word):
     result = ""
-    for c in n:
+    for c in word:
         if c.lower() not in "aeiou":
             result += c
     return result
 
-main()
+
+if __name__ == "__main__":
+    main()
