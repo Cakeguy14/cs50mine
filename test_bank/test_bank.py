@@ -1,4 +1,5 @@
-from bank import bank.hello
+import pytest
+from bank import bank
 
 
 def main():
