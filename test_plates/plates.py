@@ -22,7 +22,9 @@ def is_valid(s):
 
     for c in s:
         if c.isdigit():
-            return False
+            if c == "0":
+                return False
+            break
 
     return True
 
