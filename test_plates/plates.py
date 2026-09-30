@@ -17,8 +17,6 @@ def is_valid(s):
         return False
     if re.search(r"[a-zA-Z][0-9]", s):
         return False
-    if re.search(r"0[0-9]", s):
-        return False
 
     for c in s:
         if c.isdigit():
