@@ -3,10 +3,15 @@ from bank import value
 
 
 def test_value():
-    assert value("hello") == "$0"
+    assert value("hello") == 0
+    assert value("Hello") == 0
+    assert value("hello, newman") == 0
 
 def test_h():
-    assert value("h") == "$20"
+    assert value("hi") == 20
+    assert value("hey") == 20
+    assert value("Howdy") == 20
 
 def others():
-    assert value("123") == "$100"
+    assert value("what's up") == 100
+    assert value("good morning") == 100
