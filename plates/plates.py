@@ -19,9 +19,7 @@ def is_valid(s):
         return False
     if re.search(r"0[0-9]", s):
         return False
-    
+
     return True
-
-
 
 main()
