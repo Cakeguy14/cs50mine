@@ -20,6 +20,10 @@ def is_valid(s):
     if re.search(r"0[0-9]", s):
         return False
 
+    for c in s:
+        if c.isdigit():
+            return False
+
     return True
 
 if __name__ == "__main__":
