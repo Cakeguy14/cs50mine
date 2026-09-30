@@ -1,18 +1,17 @@
 import pytest
-from bank import bank
+from bank import hello
 
 
 def main():
-    greet = input("value: ")
-    print(value(greet))
+    greeting = input("value: ")
+    print(test_value(greeting))
 
 
 
 def test_value(greeting):
-    banks = bank()
-    assert banks.hello("hello") == "$0"
-    assert banks.hello("h") == "$20"
-    assert banks.hello() == "$100"
+    assert hello("hello") == "$0"
+    assert hello("h") == "$20"
+    assert hello() == "$100"
 
 
 
