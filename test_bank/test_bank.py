@@ -6,7 +6,9 @@ def main():
 
 
 def value(greeting):
-    assert bank.hello("hello") == 
+    banks = bank()
+    assert banks.hello("hello") == 0
+    asser 
 
 
 
