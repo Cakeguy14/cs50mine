@@ -2,7 +2,7 @@ import random
 
 
 def main():
-    level = get_level(level)
+    level = get_level()
     score = 0
 
     for _ in range(10):
@@ -14,26 +14,30 @@ def main():
         tries = 0
         while tries < 3:
             try:
-                ans = int(input(f"{a}+{b} ="))
+                ans = int(input(f"{a} + {b} = "))
                 if ans == correct:
-                    print(f"Just Right!")
                     score += 1
+                    break
                 else:
                     print("EEE")
                     tries += 1
-                    pass
-
-                if tries == 3:
-                    print(f"{a}+{b} = {correct}")
-                    pass
 
             except ValueError:
-                pass
+                print("EEE")
+                tries += 1
 
-def get_level(n):
+
+        if tries == 3:
+            print(f"{a} + {b} = {correct}")
+
+        print(f"score: {score}")
+
+
+
+def get_level():
     while True:
         try:
-            level = input("LEVEL: ")
+            level = int(input("LEVEL: "))
             if level in (1,2,3):
                 return level
         except ValueError:
@@ -42,9 +46,9 @@ def get_level(n):
 
 def generate_integer(level):
     if level == 1:
-        return random.randint(0,10)
+        return random.randint(0,9)
     elif level == 2:
-        return random.randint(10, 100)
+        return random.randint(10, 99)
     elif level == 3:
         return random.randint(100, 999)
 
