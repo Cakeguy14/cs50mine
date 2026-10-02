@@ -1,17 +1,21 @@
 
 def main():
+     
 
 
 
-def check(file):
+def filenames(filename):
     try:
         if len(sys.argv) > 1:
             filename = sys.argv[1]
             if filename.endswith(".py"):
-                return filename
+
+
+
+def check():
             else:
                 print("Too few command line arguments")
-            
+
 
 
 
