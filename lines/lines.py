@@ -4,19 +4,19 @@ import sys
 def main():
     try:
         if len(sys.argv) != 3:
-            print("Too few command line arguments")
+            sys.exit("Too few command line arguments")
         elif len(sys.argv) > 3:
-            print("Too many arguments in command line")
+            sys.exit("Too many arguments in command line")
         elif sys.argv[1]:
             if sys.argv[1].endswith(".py"):
                 file = sys.argv[1]
             else:
-                 print("Not a python file")
+                 sys.exit("Not a python file")
 
         print(files(file))
 
     except IndexError:
-        print("file position is wrong")
+        sys.exit("file position is wrong")
 
 
 def files(file):
