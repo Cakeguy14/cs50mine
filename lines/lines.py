@@ -1,4 +1,5 @@
 
+
 def main():
     try:
         if len(sys.argv) != 2:
@@ -11,6 +12,8 @@ def main():
             else:
                  print("Not a python file")
 
+        print(files(file))
+
     except IndexError:
         print("file position is wrong")
 
@@ -21,4 +24,5 @@ def files(file):
             code = re.match(r"^(#|# )|([\#A-Z])), row)
             if row not in code:
                 return count(row)
+
 
