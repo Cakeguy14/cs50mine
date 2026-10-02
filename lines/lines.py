@@ -1,10 +1,11 @@
-
+import re
+import sys
 
 def main():
     try:
-        if len(sys.argv) != 2:
+        if len(sys.argv) != 3:
             print("Too few command line arguments")
-        elif len(sys.argv) > 2:
+        elif len(sys.argv) > 3:
             print("Too many arguments in command line")
         elif sys.argv[1]:
             if sys.argv[1].endswith(".py"):
@@ -21,7 +22,7 @@ def main():
 def files(file):
     with open(file) as f:
         for row in f:
-            code = re.match(r"^(#|# )|([\#A-Z])), row)
+            code = re.match(r"^(#|# )|([\#a-zA-Z0-9]))", row)
             if row not in code:
                 return count(row)
 

@@ -9,7 +9,10 @@ def main():
     elif 18 <= hours <= 19:
         print("Dinner time")
 
-
+##check
+#check
+# check
+#
 def convert(time):
     hours, minutes = time.split(":")
     return int(hours) + int(minutes) / 60
