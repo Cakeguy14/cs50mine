@@ -1,5 +1,5 @@
 
-
+import os
 from PIL import Image
 import sys
 
@@ -13,20 +13,32 @@ def main():
 
     valid = (".jpg",".png",".jpeg")
 
-    input_ext = os.path.splittext(sys.argv[1])[1].lower()
-    output_ext = os.path.splittext(sys.argv[2])[1].lower()
+    input_ext = os.path.splitext(sys.argv[1])[1].lower()
+    output_ext = os.path.splitext(sys.argv[2])[1].lower()
 
-    if inout_ext not in valid:
-        sys.exit("Not a jpeg file")
-    elif not sys.argv[1].endswith(".png") or not sys.argv[2].endswith(".png"):
-        sys.exit("Not a png file")
+    if input_ext not in valid:
+        sys.exit("Not a a correct file")
+    if output_ext not in valid:
+        sys.exit("Not a a correct file")
+    if input_ext != output_ext:
+        sys.exit("Not same file format")
 
 
     try:
-        photo = Image.Open(sys.argv[1])
+        photo = Image.open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("file is incorrect")
 
 
-    shirt = Image.Open("took.png")
+    shirt = Image.open("took.png")
+
+    photo = ImageOps.fit(photo, shirt.size)
+
+    photo.paste(shirt, shirt)
+
+    photo.save(sys.argv[2])
+
+if __name__ == "__main__":
+    main()
+
 
