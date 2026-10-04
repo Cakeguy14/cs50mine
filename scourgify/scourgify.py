@@ -27,11 +27,11 @@ def csvread():
     return row
 
 
-def csvwrite():
+def csvwrite(row):
     with open(sys.argv[2], "a", newline="") as file2:
         lines = csv.DictWriter(file2, fieldnames=["name","house"])
         lines.writeheader()
-        lines.writerow
+        lines.writerow("name": row["name"], "house": row["house"])
         for row in lines:
             first, last = lines["name"].split(",")
 
