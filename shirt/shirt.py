@@ -15,3 +15,9 @@ def main():
         sys.exit("Not a jpeg file")
     elif not sys.argv[1].endswith(".png") or not sys.argv[2].endswith(".png"):
         sys.exit("Not a png file")
+
+
+
+def photo(filename):
+    with open(filename) as photo1:
+        photos = Image.Open(photo1)
