@@ -10,7 +10,7 @@ def parse(s):
     if src:
         embed = src.group(1)
     return embed
- 
+
 
 if __name__ == "__main__":
     main()
