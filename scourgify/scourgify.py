@@ -18,16 +18,16 @@ def main():
     except FileNotFoundError:
         sys.exit("file position is wrong")
 
+students = []
 
 def csvread():
     with open(sys.argv[1]) as file1:
         lines = csv.DictReader(file1)
-        row = list(lines)
-        print(row)
-    return row
+        for row in lines:
+            students.append({"name": row["name"], "home": row["home"]})
 
 
-def csvwrite(row):
+def csvwrite():
     with open(sys.argv[2], "a", newline="") as file2:
         lines = csv.DictWriter(file2, fieldnames=["name","house"])
         lines.writeheader()
