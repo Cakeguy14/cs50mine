@@ -29,7 +29,9 @@ def csvread():
 
 def csvwrite():
     with open(sys.argv[2], "a", newline="") as file2:
-        lines = csv.DictWrite(file2, fieldnames=["name","house"])
+        lines = csv.DictWriter(file2, fieldnames=["name","house"])
         lines.writeheader()
         lines.writerow
+        for row in lines:
+            first, last = lines["name"].split(",")
 
