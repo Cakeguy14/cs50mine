@@ -9,7 +9,7 @@ def main():
     elif len(sys.argv) > 3:
         sys.exit("Too many arguments in command line")
 
-    if not sys.argv[1].endswith(".csv") and sys.argv[2].endswith(".csv"):
+    if not sys.argv[1].endswith(".csv") or not sys.argv[2].endswith(".csv"):
         sys.exit("Not a csv file")
 
 
@@ -20,15 +20,15 @@ def csvread():
         lines = csv.DictReader(file1)
         for row in lines:
             students.append({"name": row["name"], "home": row["home"]})
-        print(lines)
 
 
 def csvwrite():
-    with open(sys.argv[2], "a", newline="") as file2:
+    with open(sys.argv[2], "w", newline="") as file2:
         lines = csv.DictWriter(file2, fieldnames=["first","last","house"])
         lines.writeheader()
-        first, last = students["name"].split(",")
-        lines.writerow({"first": first,"last": last, "house": students["house"]})
+        for student in students:
+            first, last = student["name"].split(",")
+            lines.writerow({"first": first,"last": last, "house": students["house"]})
         print(lines)
 
 
