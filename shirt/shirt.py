@@ -28,4 +28,5 @@ def photo(filename):
 def overlay(filename, Overlay):
     with Image.Open(filename) as Photo2:
         Image.paste(im: Photo2 | str | float | tuple[float, ...], box: Image | tuple[int, int, int, int] | tuple[int, int] | None = None, mask: Image | None = None) → None
+        Image.save(fp: StrOrBytesPath | IO[bytes], format: str | None = None, **params: Any) → None
     return photo2
