@@ -11,22 +11,22 @@ def main():
     elif len(sys.argv) > 3:
         sys.exit("Too many arguments in command line")
 
-    if not sys.argv[1].endswith(".jpeg") or not sys.argv[2].endswith(".jpeg"):
+    valid = (".jpg",".png",".jpeg")
+
+    input_ext = os.path.splittext(sys.argv[1])[1].lower()
+    output_ext = os.path.splittext(sys.argv[2])[1].lower()
+
+    if inout_ext not in valid:
         sys.exit("Not a jpeg file")
     elif not sys.argv[1].endswith(".png") or not sys.argv[2].endswith(".png"):
         sys.exit("Not a png file")
 
-    photos = photo(sys.argv[1])
-    overlay(sys.argv[2], photos)
+
+    try:
+        photo = Image.Open(sys.argv[1])
+    except FileNotFoundError:
+        sys.exit("file is incorrect")
 
 
-def photo(filename):
-    with Image.open(filename) as photo1:
-        PIL.ImageOps.fit(image: photo1, size: tuple[int, int], method: int = Resampling.BICUBIC, bleed: float = 0.0, centering: tuple[float, float] = (0.5, 0.5)) → Image
-    return photo1
+    shirt = Image.Open("took.png")
 
-def overlay(filename, overlay):
-    with Image.Open(filename, "a") as Photo2:
-        Image.paste(im: overlay | str | float | tuple[float, ...], box: Image | tuple[int, int, int, int] | tuple[int, int] | None = None, mask: Image | None = None) → None
-        Image.save(fp: StrOrBytesPath | IO[bytes], format: str | None = None, **params: Any) → None
-    return photo2
