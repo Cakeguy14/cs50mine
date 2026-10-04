@@ -21,4 +21,6 @@ def main():
 def photo(filename):
     with Image.open(filename) as photo1:
         PIL.ImageOps.fit(image: photo1, size: tuple[int, int], method: int = Resampling.BICUBIC, bleed: float = 0.0, centering: tuple[float, float] = (0.5, 0.5)) → Image
-        
+    return photo1
+
+def ph
