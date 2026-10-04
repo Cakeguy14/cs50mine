@@ -23,4 +23,6 @@ def photo(filename):
         PIL.ImageOps.fit(image: photo1, size: tuple[int, int], method: int = Resampling.BICUBIC, bleed: float = 0.0, centering: tuple[float, float] = (0.5, 0.5)) → Image
     return photo1
 
-def ph
+def overlay(filename):
+    with Image.Open(filename) as Photo2:
+        Image.paste(im: Photo2 | str | float | tuple[float, ...], box: Image | tuple[int, int, int, int] | tuple[int, int] | None = None, mask: Image | None = None) → None
