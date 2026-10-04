@@ -1,6 +1,6 @@
 
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 import sys
 
 
@@ -30,7 +30,7 @@ def main():
         sys.exit("file is incorrect")
 
 
-    shirt = Image.open("took.png")
+    shirt = Image.open("shirt.png")
 
     photo = ImageOps.fit(photo, shirt.size)
 
