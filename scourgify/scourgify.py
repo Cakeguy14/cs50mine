@@ -13,11 +13,6 @@ def main():
         sys.exit("Not a csv file")
 
 
-    try:
-        csvread()
-    except FileNotFoundError:
-        sys.exit("file position is wrong")
-
 students = []
 
 def csvread():
