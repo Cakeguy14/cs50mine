@@ -8,7 +8,9 @@ def main():
 
 def parse(s):
     src = re.search(r"src=\"([a-ZA-Z0-9\/\.])\"", s)
-    embed = src.group(1)
+    if src:
+        embed = src.group(1)
+    return embed
 
 
 
