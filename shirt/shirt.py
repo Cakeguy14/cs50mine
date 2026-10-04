@@ -19,5 +19,5 @@ def main():
 
 
 def photo(filename):
-    with open(filename) as photo1:
-        photos = Image.Open(photo1)
+    with Image.open(filename) as photo1:
+        
