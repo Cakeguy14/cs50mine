@@ -14,8 +14,7 @@ def main():
 
 
     try:
-        
-
+        csvread()
     except FileNotFoundError:
         sys.exit("file position is wrong")
 
