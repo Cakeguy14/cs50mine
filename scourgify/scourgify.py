@@ -36,7 +36,7 @@ def csvwrite(filename, students):
         lines = csv.DictWriter(file2, fieldnames=["first","last","house"])
         lines.writeheader()
         for student in students:
-            first, last = student["name"].split(",")
+            last, first = student["name"].split(",")
             lines.writerow({"first": first,"last": last, "house": student["house"]})
 
 
