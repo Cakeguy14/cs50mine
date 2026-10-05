@@ -4,7 +4,7 @@ import sys
 
 def main():
     print(parse((input("HTML: "))))
-    
+
 
 
 def parse(s):
@@ -20,8 +20,7 @@ def parse(s):
 
         if not match:
             return none
-
-        return f"https://youtu.be/{match.group(1)}"
+            return f"https://youtu.be/{match.group(1)}"
 
 if __name__ == "__main__":
     main()
