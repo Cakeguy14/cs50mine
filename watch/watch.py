@@ -16,7 +16,8 @@ def parse(s):
 
         parts = string.split("/")
         value = parts[-1]
-        return f"https://youtu.be/{value}"
+        if "\" not in value:
+            return f"https://youtu.be/{value}"
 
 if __name__ == "__main__":
     main()
