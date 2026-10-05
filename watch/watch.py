@@ -8,16 +8,15 @@ def main():
 
 def parse(s):
     with open(s) as link:
-        iframe = re.search(r'<iframe[^>]*src, link)
-        string = str(youtube.group(1))
-        if string:
-            for n in string:
-                if n == "/":
-                    n.split()
-                    print("/".join(n))
+        iframe = re.search(r'<iframe[^>]*src="([^"]+)"', link)
+        if not iframe:
+            return None
+
+        string = iframe.group(1)
+
+        parts = string.split("/")
+        value = part[-1]
+        return f"https://youtu.be/{value}"
 
 if __name__ == "__main__":
     main()
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
