@@ -8,7 +8,7 @@ def main():
 
 def parse(s):
     with open(s) as link:
-        youtube = re.search(r'src="([a-zA-Z0-9\/\:\.]+)"', link)
+        iframe = re.search(r'<iframe[^>]*src, link)
         string = str(youtube.group(1))
         if string:
             for n in string:
