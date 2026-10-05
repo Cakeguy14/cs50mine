@@ -7,15 +7,15 @@ def main():
 
 
 def parse(s):
-    with open(s) as link:
-        iframe = re.search(r'<iframe[^>]*src="([^"]+)"', link)
+    if s:
+        iframe = re.search(r'<iframe[^>]*src="([^"]+)"', s)
         if not iframe:
             return None
 
         string = iframe.group(1)
 
         parts = string.split("/")
-        value = part[-1]
+        value = parts[-1]
         return f"https://youtu.be/{value}"
 
 if __name__ == "__main__":
