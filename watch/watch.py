@@ -13,6 +13,7 @@ def parse(s):
         return None
 
     string = iframe.group(1)
+    print(string)
     pattern = r'^https?://(?:www\.)?(?:youtube\.com/embed/|youtu\.be/)([a-zA-Z0-9_-]+)$'
     match = re.search(pattern, string, re.IGNORECASE)
 
