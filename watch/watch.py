@@ -14,8 +14,12 @@ def parse(s):
 
         string = iframe.group(1)
 
-        parts = string.split("/")
-        value = parts[-1]
+        pattern = r'^https?://(?:www\.)?(?:youtube\.com/embed/|youtu\.be/)([a-zA-Z0-9_-]+)$'
+        match = re.search(pattern, string, re.IGNORECASE)
+
+        if not match:
+            return none
+        
         return f"https://youtu.be/{value}"
 
 if __name__ == "__main__":
