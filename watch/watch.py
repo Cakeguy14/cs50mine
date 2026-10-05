@@ -10,7 +10,11 @@ def parse(s):
     with open(s) as link:
         youtube = re.search(r'src="([a-zA-Z0-9\/\:\.]+)"', link)
         string = str(youtube.group(1))
-        
+        if string:
+            for n in string:
+                if n == "/":
+                    n.split()
+                    print("/".join(n))
 
 if __name__ == "__main__":
     main()
