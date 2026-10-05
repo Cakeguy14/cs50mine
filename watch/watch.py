@@ -2,14 +2,18 @@ import re
 
 
 def main():
-    print(parse(input("HTML: ")))
-
+    value = str(input("HTML: "))
+    if value:
+        print(parse(value))
 
 def parse(s):
-    src = re.search(r"src=\"([a-ZA-Z0-9\/\.])\"", s)
-    if src:
-        embed = src.group(1)
-    return embed
+    src = re.search(r'src="([^"]+)"', s)
+    if not src:
+        None
+
+    url = src.group(1)
+
+    return url
 
 
 if __name__ == "__main__":
