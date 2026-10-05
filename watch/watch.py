@@ -19,8 +19,8 @@ def parse(s):
 
         if not match:
             return none
-        
-        return f"https://youtu.be/{value}"
+
+        return f"https://youtu.be/{match.group(1)}"
 
 if __name__ == "__main__":
     main()
