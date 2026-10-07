@@ -3,7 +3,7 @@ import validators
 
 def main():
     mail = input("Mail: ")
-    if mail:
+    try:
         result = validators.email("someone@example.com")
         if result == mail:
             print("Valid")
