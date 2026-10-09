@@ -16,6 +16,9 @@ def takedate(value):
     except ValueError:
         sys.exit("Not correct format")
 
+def convert(value):
+    try:
+        
 
 if __name__ == "__main__":
     main()
