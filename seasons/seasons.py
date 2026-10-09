@@ -8,18 +8,16 @@ def main():
 
 
 def takedate(value):
-    try:
-        match = re.fullmatch(r"^([\d{4}])-([\d{2}])-([\d{2}])$", value)
-        if match:
-            dates = dt.date.fromisoformat(str(value))
-            print(dates)
-            return dates
-    except ValueError:
-        sys.exit("Not correct format")
+    match = re.search(r"^[\d{4}]-[\d{2}]-[\d{2}]$", value)
+    if match:
+        dates = dt.date.fromisoformat(value)
+        print(dates)
+        #return dates
+    #except ValueError:
+     #   sys.exit("Not correct format")
 
 #def convert(value):
     #try:
-
 
 if __name__ == "__main__":
     main()
