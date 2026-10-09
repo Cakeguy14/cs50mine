@@ -9,7 +9,7 @@ def main():
 
 def takedate(value):
     try:
-        match = re.search(r"^\d{4}-\d{2}-\d{2}$", value)
+        match = re.fullmatch(r"^\d{4}-\d{2}-\d{2}$", value)
         if match:
             dates = dt.date.fromisoformat(value)
         return dates
@@ -22,7 +22,11 @@ def convert(value):
         word1 = words.group(1)
         word2 = words.group(2)
         word3 = words.group(3)
-        
+        if words:
+            wordlist.append(word1, word2, word3)
+            for each in wordlist[n]:
+                
+
 
 
 
