@@ -1,33 +1,30 @@
 import re
 import datetime as dt
+import sys
+import inflect
 
 
 def main():
     dates = input("Date of Birth: ")
-    print(takedate(dates))
-
-
-def takedate(value):
     try:
-        match = re.fullmatch(r"^\d{4}-\d{2}-\d{2}$", value)
-        if match:
-            dates = dt.date.fromisoformat(value)
-        return dates
+        birth = convert(dates)
     except ValueError:
-        sys.exit("Not correct format")
+        sys.exit("Invalid date")
+
+    p = inflect.engine()
+    value = p.number_to_words(birth, andword="")
+    print(f"{value.capitalize()} minutes")
+
 
 def convert(value):
-    try:
-        words = re.search(r"^(\d{4})-(\d{2})-(\d{2})$", value)
-        word1 = words.group(1)
-        word2 = words.group(2)
-        word3 = words.group(3)
-        if words:
-            wordlist.append(word1, word2, word3)
-            for each in wordlist[n]:
-                
+    if not re.fullmatch(r"^(\d{4})-(\d{2})-(\d{2})$", value):
+        raise ValueError("not correct")
 
+    birth = dt.date.fromisoformat(value)
+    date = dt.date.today()
+    delta = date - birth
 
+    return abs(delta.days) * 24 * 60
 
 
 if __name__ == "__main__":
