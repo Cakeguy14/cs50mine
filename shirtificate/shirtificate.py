@@ -2,24 +2,19 @@ from fpdf import FPDF
 
 def main():
     name = input("enter your name: ")
-    print(shirtificate(name))
+    shirtificate(name)
 
 
 
 def shirtificate(n):
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.image("/workspaces/193590090/shirtificate/shirtificate.png", x=20, y=60)
-
     pdf = FPDF(orientation="P", unit="mm", format="A4")
-    pdf.set_font("helvetica", style="B", size=16)
-    pdf.cell(40, 10, "{input}")
+    pdf.add_page()
+    pdf.image("shirtificate.png", x=(210 - pdf.w), y=60)
 
-    pdf.set_font("Times", size=12)
-    for i in range(1, 41):
-        pdf.cell(0, 10, f"CS50 Shirtificate {i}", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("helvetica", style="B", size=30)
+    pdf.set_text_colour(255, 255, 255)
+    pdf.cell(0, 200, f"{name} took CS50", align="C")
     pdf.output("shirtificate.pdf")
-
 
 
 if __name__ == "__main__":
