@@ -1,37 +1,44 @@
 class Jar:
     def __init__(self, capacity=12):
-        if 0 > self.capacity:
+        if not isinstance(capacity, int) or capacity < 0:
             raise ValueError("not an int")
-        self.capacity = capacity
+        self._capacity = capacity
+        self._size = 0
 
     def __str__(self):
-        return f"{self.capacity} * 🍪"
+        return self._size * "🍪"
 
     def deposit(self, n):
-        if n < self.capacity:
-            self.capacity += n
-            return self.capacity
-        else:
+        if not isinstance(n, int) or n <0:
+            raise ValueError("not an int")
+        if self._size + n > self._capacity:
             raise ValueError("no more cookie")
+        self._size += n
 
     def withdraw(self, n):
-        if n < self.capcity:
-            self.capacity -= n
-            return self.capacity
-        else:
+        if not isinstance(n, int) or n < 0:
+            raise ValueError("not an int")
+        if n > self._size:
             raise ValueError("more than what we have")
+        self._size -= n
 
 
     @property
     def capacity(self):
-        return self.capacity
+        return self._capacity
 
     @property
-    def size(self, capacity=0):
-        return self.capacity
+    def size(self):
+        return self._size
+
+def main():
+    cookies = Jar()
+    cookies.deposit(5)
+    print(cookies)
+    cookies.withdraw(3)
+    print(cookies)
 
 
-cookies = Jar()
-deposit = cookies.deposit(5)
-print(cookies.capacity)
+if __name__ == "__main__":
+    main()
 
