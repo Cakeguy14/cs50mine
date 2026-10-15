@@ -1,3 +1,7 @@
 from jar import Jar
 
-def 
+cookies = Jar()
+
+def test_deposit():
+    assert deposit == 5
+
